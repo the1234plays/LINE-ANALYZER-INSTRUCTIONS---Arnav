@@ -45,26 +45,12 @@ function getDescription(x1, y1, x2, y2) {
 
 }
 
-function getPointLocation(x1, y1, ) {
-    if (x1 > 0 && y1 > 0) {
+function getPointLocation(x, y, ) {
+    if (x > 0 && y > 0) {
         return "quadrant 1"
-    } else if (x1 < 0 && y1 > 0) {
+    } else if (x < 0 && y > 0) {
         return "quadrant 2"
-    } else if (x1 < 0 && y1 < 0) {
-        return "quadrant 3"
-    } else {
-        return "quadrant 4"
-    }
-
-
-}
-
-function getPointLocation(x2, y2, ) {
-    if (x2 > 0 && y2 > 0) {
-        return "quadrant 1"
-    } else if (x2 < 0 && y2 > 0) {
-        return "quadrant 2"
-    } else if (x2 < 0 && y2 < 0) {
+    } else if (x < 0 && y < 0) {
         return "quadrant 3"
     } else {
         return "quadrant 4"
