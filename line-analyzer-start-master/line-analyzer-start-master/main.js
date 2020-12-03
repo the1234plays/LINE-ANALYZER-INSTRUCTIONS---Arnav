@@ -37,10 +37,16 @@ function getSlope(x1, y1, x2, y2) {
 
 function getDescription(x1, y1, x2, y2) {
     let dos = (y2 - y1) / (x2 - x1)
+    let xOver = (x2 - x1)
+    let yOver = y2-y1
     if (dos > 0) {
         return "increasing"
-    } else {
-        return "decreasing"
+    } else if ( xOver == 0) {
+        return "horizotnal"
+    } else if (yOver == 0) {
+        return "on y axis"
+    }   else {
+        return "vertical"
     }
 
 }
@@ -52,6 +58,9 @@ function getPointLocation(x, y, ) {
         return "quadrant 2"
     } else if (x < 0 && y < 0) {
         return "quadrant 3"
+    } else if (x == 0 && y == 0) {
+        return "origin"
+
     } else {
         return "quadrant 4"
     }
